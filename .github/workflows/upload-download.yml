@@ -1,4 +1,4 @@
-name: Multiple Jobs
+name: Upload and Download Artifacts
 
 on: [push]
 
