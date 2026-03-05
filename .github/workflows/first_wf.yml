@@ -9,8 +9,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v6
             - name: Welcome Message
-              run: echo "Welcome to GitHub Actions"
-            - name: List Files
-              run: ls -la
-            - name: Read File
-              run: cat README.md
+              run: |
+                  echo "Welcome to GitHub Actions"
+                  ls -la
+                  cat README.md
