@@ -1,0 +1,13 @@
+name: Execute Shell Script
+
+on: push
+
+jobs:
+    shell-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v6
+
+            - name: Execute Shell Script
+              run: bash ./ascii-script.sh
