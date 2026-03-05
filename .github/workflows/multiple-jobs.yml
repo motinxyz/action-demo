@@ -6,6 +6,9 @@ jobs:
     build_job_1:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v6
+
             - name: Run Shell Script
               run: ./ascii-script.sh
 
