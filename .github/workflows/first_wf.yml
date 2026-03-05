@@ -8,8 +8,10 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v6
-            - name: Welcome Message
+            - name: List & Read files
               run: |
                   echo "Welcome to GitHub Actions"
                   ls -la
                   cat README.md
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON...RAWR" >> dragon.txt
