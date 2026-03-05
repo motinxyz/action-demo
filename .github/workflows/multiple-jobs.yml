@@ -1,0 +1,30 @@
+name: Multiple Jobs
+
+on: push
+
+jobs:
+    build_job_1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run Shell Script
+              run: ./ascii-script.sh
+
+            - name: Sleep for 30 seconds
+              run: sleep 30
+    test_job_1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run Shell Script
+              run: ./ascii-script.sh
+
+            - name: Sleep for 10 seconds
+              run: sleep 10
+
+    deploy_job_1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run Shell Script
+              run: ./ascii-script.sh
+
+            - name: Sleep for 30 seconds
+              run: sleep 30
