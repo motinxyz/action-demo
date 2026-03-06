@@ -1,6 +1,8 @@
 name: Upload and Download Artifacts
 
-on: [push]
+# on: [push]
+on:
+    workflow_dispatch:
 
 jobs:
     build_job_1:

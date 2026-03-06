@@ -1,6 +1,8 @@
 name: Upload and Download Artifacts Practice
 
-on: push
+# on: push
+on:
+    workflow_dispatch:
 
 jobs:
     upload:
