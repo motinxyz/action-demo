@@ -10,7 +10,7 @@ jobs:
               run: echo "Build Successful"
 
     deploy:
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/feature'
         needs: build
         runs-on: ubuntu-latest
         steps:
