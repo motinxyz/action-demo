@@ -1,0 +1,28 @@
+name: Explore Workflow Filter & Activities
+
+on:
+    push:
+        branches:
+            - main
+            - "!feature/"
+        # branches-ignore:
+        #     - feature/*
+        #     - test/**
+    workflow_dispatch:
+    # schedule:
+    #     - cron: "*/59 * * * *"
+    pull_request:
+        types:
+            - opened
+            - closed
+        paths-ignore:
+            - README.md
+        branches:
+            - main
+
+jobs:
+    push:
+        runs-on: ubuntu-latest
+        steps:
+            - name: ecjo when the job is executed
+              run: echo this workflow/job/step is executed for event type - ${{github.event_name}}
