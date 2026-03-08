@@ -1,0 +1,11 @@
+name: Reusable Workflow
+
+on:
+    workflow_call:
+
+jobs:
+    greetings:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Greet the user
+              run: echo "Hello ${{github.event.inputs.name}}"
