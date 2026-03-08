@@ -1,0 +1,18 @@
+name: Expression
+
+on: workflow_dispatch
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo info
+              run: echo "Build Successful"
+
+    deploy:
+        if: github.ref == 'refs/heads/main'
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo info
+              run: echo "Deployment Successful"
